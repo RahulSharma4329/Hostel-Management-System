@@ -29,9 +29,9 @@ export default function Login() {
         console.log(response);
         if (response.data.success === true) {
           if (response.data.data[0].role === "student") {
-            navigate("/studentsdashboard");
+            navigate("/studentsdashboard", { state: { username: username } });
           } else if (response.data.data[0].role === "admin") {
-            navigate("/admindashboard");
+            navigate("/admindashboard", { state: { username: username } });
           }
         }
       });

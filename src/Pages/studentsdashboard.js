@@ -1,5 +1,7 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Studentsdashboard() {
-  return <div>students dashboard</div>;
+  const location = useLocation();
+  return <div>{location.state.username}</div>;
 }

@@ -21,7 +21,7 @@ export default function Login() {
 
   const handlesubmit = (e) => {
     axios
-      .post("https://hsm-api.herokuapp.com/login", {
+      .post("https://hms-server-rahulsharma4329.koyeb.app/login", {
         username: username,
         password: password,
       })

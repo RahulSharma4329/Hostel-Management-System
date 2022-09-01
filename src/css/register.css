@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.titlemsg{
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+    font-weight: 500;
+    margin: 5rem;
+    font-style: italic;
+}
+.registerform{
+    background-color: whitesmoke;
+    margin: 0 5rem;
+    border-radius: 1rem;
+    width: 35%;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.416);
+    padding: 3rem;
+}
+.leftcolumnreg form{
+    display: flex;
+    flex-direction: column;
+
+}
+.leftcolumnreg form label{
+    font-family: 'Rubik', sans-serif;
+    margin-top: 1rem ;
+    margin-left: 0.5rem;
+    font-size: medium;
+    margin-bottom: -10px;
+    z-index: 10;
+    color: darkblue;
+    font-weight: 400;
+}
+.leftcolumnreg form input{
+    border-radius: 10px;
+    padding: 1rem 1rem;
+    outline: none;
+    border: none;
+}
+.regsubmitbutton{
+    border-radius: 15px;
+    padding: 1rem 1rem ;
+    outline: none;
+    border: none;
+    background-color: #008997;
+    color: white;
+    width: 35%;
+    background-image: linear-gradient(#008997, #0367a6);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 2rem;
+}

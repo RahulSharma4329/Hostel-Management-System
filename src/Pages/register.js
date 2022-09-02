@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "../css/register.css";
 
 export default function Register() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [phone, setPhone] = useState("");
@@ -16,6 +17,7 @@ export default function Register() {
   const [roomno, setroomno] = useState();
   const [pass, setpass] = useState("");
   const [checkpass, setcheckpass] = useState("");
+  const role = location.state.role;
 
   const onchangeName = (e) => {
     setname(e.target.value);
@@ -63,7 +65,7 @@ export default function Register() {
         hostelname: hostelname,
         roomno: roomno,
         password: pass,
-        role: "student",
+        role: role,
       };
       axios
         .post(

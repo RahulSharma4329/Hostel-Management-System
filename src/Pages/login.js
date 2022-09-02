@@ -36,8 +36,8 @@ export default function Login() {
         }
       });
   };
-  const jumptoregister = (e) => {
-    navigate("/register");
+  const jumptoregister = (e, role) => {
+    navigate("/register", { state: { role: role } });
   };
 
   return (
@@ -74,7 +74,14 @@ export default function Login() {
         </div>
         <div className="rightcolumn">
           <div className="register">
-            <button onClick={jumptoregister}> Register</button>
+            <button onClick={jumptoregister("student")}>
+              {" "}
+              Register as a Student
+            </button>
+            <button onClick={jumptoregister("admin")}>
+              {" "}
+              Register as an Admin
+            </button>
           </div>
         </div>
       </div>

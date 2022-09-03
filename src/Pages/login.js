@@ -31,13 +31,10 @@ export default function Login() {
           if (response.data.data[0].role === "student") {
             navigate("/studentsdashboard", { state: { username: username } });
           } else if (response.data.data[0].role === "admin") {
-            navigate("/admindashboard", { state: { username: username } });
+            navigate("/admindashboard", { state: { username: username } }); 
           }
         }
       });
-  };
-  const jumptoregister = (e, role) => {
-    navigate("/register", { state: { role: role } });
   };
 
   return (
@@ -74,11 +71,11 @@ export default function Login() {
         </div>
         <div className="rightcolumn">
           <div className="register">
-            <button onClick={jumptoregister("student")}>
+            <button onClick={(e)=>{navigate("/register", { state: { role: "student" } })}}>
               {" "}
               Register as a Student
             </button>
-            <button onClick={jumptoregister("admin")}>
+            <button onClick={(e)=>{navigate("/register", { state: { role: "admin" } })}}>
               {" "}
               Register as an Admin
             </button>

@@ -26,12 +26,12 @@ export default function Login() {
         password: password,
       })
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         if (response.data.success === true) {
           if (response.data.data[0].role === "student") {
             navigate("/studentsdashboard", { state: { username: username } });
           } else if (response.data.data[0].role === "admin") {
-            navigate("/admindashboard", { state: { username: username } }); 
+            navigate("/admindashboard", { state: { username: username } });
           }
         }
       });
@@ -71,11 +71,19 @@ export default function Login() {
         </div>
         <div className="rightcolumn">
           <div className="register">
-            <button onClick={(e)=>{navigate("/register", { state: { role: "student" } })}}>
+            <button
+              onClick={(e) => {
+                navigate("/register", { state: { role: "student" } });
+              }}
+            >
               {" "}
               Register as a Student
             </button>
-            <button onClick={(e)=>{navigate("/register", { state: { role: "admin" } })}}>
+            <button
+              onClick={(e) => {
+                navigate("/register", { state: { role: "admin" } });
+              }}
+            >
               {" "}
               Register as an Admin
             </button>

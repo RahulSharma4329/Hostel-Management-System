@@ -5,6 +5,7 @@ import Profilesidebar from "../components/Profilesidebar";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
+import Complaintacceptor from "../components/Complaintacceptor";
 
 export default function Studentsdashboard() {
   const location = useLocation();
@@ -44,6 +45,7 @@ export default function Studentsdashboard() {
       <Navbar />
       <div className="displaycontent">
         <Profilesidebar {...senddata} />
+        <Complaintacceptor {...username} />
       </div>
     </div>
   );
